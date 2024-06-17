@@ -1,0 +1,73 @@
+<form
+  class="form-devis"
+  (ngSubmit)="devisForm.valid && onSubmit()"
+  [formGroup]="devisForm"
+  #formDevis="ngForm"
+>
+  <h1>Demande de prestation</h1>
+  <div class="infos">
+    <div class="container-input">
+      <label for="title">Intitulé de la mission</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        formControlName="title"
+        placeholder="Nom de la mission"
+      />
+    </div>
+    <div class="date">
+      <h2>Date de début de la prestation</h2>
+      <div class="btn-radio-container">
+        <p-radioButton
+          inputId="DES_QUE_POSSIBLE"
+          value="DES_QUE_POSSIBLE"
+          formControlName="debutCondition"
+        />
+        <label for="DES_QUE_POSSIBLE"> Dès que possible </label>
+      </div>
+      <div class="btn-radio-container">
+        <p-radioButton
+          inputId="DATE_PRECISE"
+          value="DATE_PRECISE"
+          formControlName="debutCondition"
+        />
+        <label for="DATE_PRECISE"> A une date précise </label>
+      </div>
+      <div class="btn-radio-container">
+        <p-radioButton
+          inputId="PEU_IMPORTE"
+          value="PEU_IMPORTE"
+          formControlName="debutCondition"
+        />
+        <label for="PEU_IMPORTE"> Je ne sais pas </label>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isDatePreciseSelected" class="container-input">
+    <label for="dateBegin">Date de début *</label>
+    <input
+      type="date"
+      id="dateBegin"
+      name="dateBegin"
+      formControlName="dateBegin"
+      placeholder="Date de début"
+    />
+  </div>
+
+  <div class="container-input">
+    <label for="numberDays">Nombre de jours</label>
+    <input
+      type="number"
+      id="numberDays"
+      name="numberDays"
+      formControlName="numberDays"
+      placeholder="Nombre de jours"
+    />
+  </div>
+
+  <div class="btn-submit">
+    <button type="submit">Enregistrer</button>
+  </div>
+</form>

@@ -1,0 +1,94 @@
+.container-card-price {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.53);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  border-radius: 15px;
+  min-height: 300px;
+  cursor: pointer;
+  padding: 0px 20px 20px 20px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.price {
+  display: flex;
+  justify-content: start;
+}
+
+.price h4 {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content h2 {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(65, 65, 65);
+  margin: 10px 0;
+}
+
+img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: 30% 30%;
+  border-radius: 50%;
+}
+.img-profile {
+  width: 30%;
+}
+
+.text-profile {
+  width: 70%;
+  padding-left: 30px;
+}
+
+.tarif-freelance,
+.tarif-inspire {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tarif-freelance h3,
+.tarif-inspire h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--first-color);
+  align-items: center;
+  min-height: 30px;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.total h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+.total h5 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 5px 0;
+}
+/* .total-presta {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+} */

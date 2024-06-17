@@ -1,0 +1,74 @@
+.container-card-profile {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.53);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border-radius: 15px;
+  min-height: 300px;
+  cursor: pointer;
+  padding: 0px 20px 20px 20px;
+}
+.content {
+  display: flex;
+}
+.price {
+  display: flex;
+  justify-content: end;
+}
+
+.price h4 {
+  color: white;
+  font-size: 15px;
+  padding: 8px 20px;
+  font-weight: 500;
+  background-color: var(--second-color);
+  border-radius: 4px;
+}
+
+.content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  margin: 10px 0;
+}
+
+.content h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: 30% 30%;
+  border-radius: 50%;
+}
+.img-profile {
+  width: 30%;
+}
+
+.text-profile {
+  width: 70%;
+  padding-left: 30px;
+}
+
+.chip span {
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 15px;
+  color: var(--first-color);
+
+  cursor: default;
+  background-color: var(--anti-primary-color);
+}
+
+.chip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

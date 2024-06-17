@@ -1,0 +1,59 @@
+.form-devis {
+  width: 100%;
+}
+label {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+}
+.btn-submit {
+  margin-top: 50px;
+}
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn-submit button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 11px 20px;
+  border-radius: 6px;
+  border: none;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  background-color: var(--first-color);
+  color: white;
+}
+
+input {
+  padding: 12px 10px;
+  border: solid 1px var(--first-color);
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+input::placeholder {
+  color: rgb(151, 150, 150);
+  font-style: italic;
+}
+
+.btn-radio-container {
+  margin-top: 10px;
+  border: solid 1px var(--first-color);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.btn-radio-container label:hover {
+  cursor: pointer;
+}
+
+.btn-radio-container label {
+  padding-left: 10px;
+  font-weight: 400;
+}
