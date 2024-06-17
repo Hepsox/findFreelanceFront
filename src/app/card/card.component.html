@@ -5,7 +5,7 @@
 
   <div class="content" [routerLink]="['/booking/freelance/', freelance.id]">
     <div class="img-profile">
-      <img src="/assets/marie-delaire.jpeg" alt="" />
+      <img [src]="freelance.photo" />
     </div>
     <div class="text-profile">
       <h2>{{ freelance.firstname }} {{ freelance.lastname }}</h2>
