@@ -34,12 +34,12 @@
         />
         <label for="DATE_PRECISE"> A une date précise </label>
         <div *ngIf="isDatePreciseSelected" class="container-input date-precise">
-          <label for="dateBegin">Date de début *</label>
+          <label for="dateDebut">Date de début *</label>
           <input
             type="date"
-            id="dateBegin"
-            name="dateBegin"
-            formControlName="dateBegin"
+            id="dateDebut"
+            name="dateDebut"
+            formControlName="dateDebut"
             placeholder="Date de début"
           />
         </div>
@@ -63,6 +63,7 @@
       name="numberDays"
       formControlName="numberDays"
       placeholder="Nombre de jours"
+      min="0"
     />
   </div>
 

@@ -6,16 +6,24 @@
   <div class="content">
     <div class="tarif-freelance">
       <h2>TARIF DU FREELANCE (HT)</h2>
-      <h3>{{ freelance.price }}</h3>
+      <h3>{{ freelance.price * selectedNumberOfDays }} €</h3>
     </div>
     <hr />
     <div class="tarif-inspire">
       <h2>FRAIS DE SERVICE INDPITR (HT)</h2>
-      <h3>360 euros</h3>
+      <h3>{{ bookingService.DAILY_FEE * selectedNumberOfDays }} €</h3>
     </div>
     <div class="total">
       <h4 class="total-presta">Total de la prestation :</h4>
-      <h5>500 euros</h5>
+      <h5>
+        {{
+          bookingService.calculTotalPrestation(
+            freelance.price,
+            selectedNumberOfDays
+          )
+        }}
+        €
+      </h5>
     </div>
   </div>
 </div>

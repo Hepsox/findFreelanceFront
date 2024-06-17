@@ -1,14 +1,20 @@
 <div class="container-principal">
   <div class="container-app">
     <div class="container-formulaire">
-      <app-form></app-form>
+      <app-form
+        [freelance]="freelance"
+        (numberOfDays)="handleNumberOfDaysChange($event)"
+      ></app-form>
     </div>
     <div class="container-infos" *ngIf="freelance">
       <div class="card">
         <app-card [freelance]="freelance"></app-card>
       </div>
       <div class="price">
-        <app-price [freelance]="freelance"></app-price>
+        <app-price
+          [freelance]="freelance"
+          [selectedNumberOfDays]="selectedNumberOfDays"
+        ></app-price>
       </div>
     </div>
   </div>

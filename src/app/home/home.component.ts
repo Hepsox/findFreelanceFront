@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent {
   freelance: Freelance | null = null;
+  selectedNumberOfDays: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,5 +23,9 @@ export class HomeComponent {
     this.service.getFreelanceById(id).subscribe((freelance: Freelance) => {
       this.freelance = freelance;
     });
+  }
+
+  handleNumberOfDaysChange(numberOfDays: number): void {
+    this.selectedNumberOfDays = numberOfDays;
   }
 }
