@@ -14,8 +14,13 @@ label {
 .container-input {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
+}
+
+.date h2 {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .btn-submit button {
@@ -56,4 +61,12 @@ input::placeholder {
 .btn-radio-container label {
   padding-left: 10px;
   font-weight: 400;
+}
+.date-precise label {
+  font-weight: 400;
+  margin-left: -10px;
+}
+
+.date-precise input {
+  border-radius: 50px;
 }

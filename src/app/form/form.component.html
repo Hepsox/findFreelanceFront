@@ -7,7 +7,7 @@
   <h1>Demande de prestation</h1>
   <div class="infos">
     <div class="container-input">
-      <label for="title">Intitulé de la mission</label>
+      <label for="title">Intitulé de la mission *</label>
       <input
         type="text"
         id="title"
@@ -16,8 +16,8 @@
         placeholder="Nom de la mission"
       />
     </div>
-    <div class="date">
-      <h2>Date de début de la prestation</h2>
+    <div class="date container-input">
+      <h2>Date de début de la prestation *</h2>
       <div class="btn-radio-container">
         <p-radioButton
           inputId="DES_QUE_POSSIBLE"
@@ -33,6 +33,16 @@
           formControlName="debutCondition"
         />
         <label for="DATE_PRECISE"> A une date précise </label>
+        <div *ngIf="isDatePreciseSelected" class="container-input date-precise">
+          <label for="dateBegin">Date de début *</label>
+          <input
+            type="date"
+            id="dateBegin"
+            name="dateBegin"
+            formControlName="dateBegin"
+            placeholder="Date de début"
+          />
+        </div>
       </div>
       <div class="btn-radio-container">
         <p-radioButton
@@ -45,19 +55,8 @@
     </div>
   </div>
 
-  <div *ngIf="isDatePreciseSelected" class="container-input">
-    <label for="dateBegin">Date de début *</label>
-    <input
-      type="date"
-      id="dateBegin"
-      name="dateBegin"
-      formControlName="dateBegin"
-      placeholder="Date de début"
-    />
-  </div>
-
   <div class="container-input">
-    <label for="numberDays">Nombre de jours</label>
+    <label for="numberDays">Nombre de jours *</label>
     <input
       type="number"
       id="numberDays"

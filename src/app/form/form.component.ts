@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
       debutCondition: ['', Validators.required],
       description: ['', Validators.required],
       dateBegin: new FormControl<Date | null>(null, Validators.required),
-      numberDays: ['', Validators.required],
+      numberDays: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
     });
   }
 
