@@ -1,6 +1,6 @@
 <form
   class="form-devis"
-  (ngSubmit)="devisForm.valid && onSubmit()"
+  (ngSubmit)="onSubmit()"
   [formGroup]="devisForm"
   #formDevis="ngForm"
 >
@@ -64,6 +64,17 @@
       formControlName="numberDays"
       placeholder="Nombre de jours"
     />
+  </div>
+
+  <div class="container-input">
+    <label for="numberDays">Description de la mission *</label>
+    <textarea
+      id="description"
+      name="description"
+      formControlName="description"
+      placeholder="Description de la mission *"
+      rows="4"
+    ></textarea>
   </div>
 
   <div class="btn-submit">

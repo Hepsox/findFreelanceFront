@@ -1,20 +1,17 @@
 <div class="container-card-profile">
   <div class="price">
-    <h4>340€ / j</h4>
+    <h4>{{ freelance.price }} €/j</h4>
   </div>
 
-  <div class="content">
+  <div class="content" [routerLink]="['/booking/freelance/', freelance.id]">
     <div class="img-profile">
       <img src="/assets/marie-delaire.jpeg" alt="" />
     </div>
     <div class="text-profile">
-      <h2>Marie Delaire</h2>
-      <h3>Developpeur Web Front-end Angular</h3>
+      <h2>{{ freelance.firstname }} {{ freelance.lastname }}</h2>
+      <h3>{{ freelance.description }}</h3>
       <div class="chip">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JS</span>
-        <span>Angular</span>
+        <span>{{ freelance.skills }}</span>
       </div>
     </div>
   </div>

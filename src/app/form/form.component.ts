@@ -5,6 +5,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'app-form',
@@ -14,9 +15,10 @@ import {
 export class FormComponent implements OnInit {
   devisForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private service: BookingService) {}
 
   ngOnInit() {
+    console.log('coucou');
     this.devisForm = this.fb.group({
       title: ['', Validators.required],
       debutCondition: ['', Validators.required],
@@ -31,6 +33,8 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('coucou');
     console.log(this.devisForm.value);
+    // this.service.createBooking(this.devisForm.value).subscribe();
   }
 }

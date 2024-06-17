@@ -12,9 +12,19 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CalendarModule } from 'primeng/calendar';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AllFreelanceComponent } from './all-freelance/all-freelance.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, PriceComponent, FormComponent, HomeComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    PriceComponent,
+    FormComponent,
+    HomeComponent,
+    HeaderComponent,
+    AllFreelanceComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +32,7 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     RadioButtonModule,
     CalendarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

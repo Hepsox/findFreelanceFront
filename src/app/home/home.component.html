@@ -3,9 +3,13 @@
     <div class="container-formulaire">
       <app-form></app-form>
     </div>
-    <div class="container-infos">
-      <div class="card"><app-card></app-card></div>
-      <div class="price"><app-price></app-price></div>
+    <div class="container-infos" *ngIf="freelance">
+      <div class="card">
+        <app-card [freelance]="freelance"></app-card>
+      </div>
+      <div class="price">
+        <app-price [freelance]="freelance"></app-price>
+      </div>
     </div>
   </div>
 </div>

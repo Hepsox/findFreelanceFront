@@ -1,0 +1,7 @@
+<div *ngIf="FreelanceList$ | async as freelanceList">
+  <div class="card-container">
+    <div *ngFor="let freelance of freelanceList">
+      <app-card [freelance]="freelance"></app-card>
+    </div>
+  </div>
+</div>
