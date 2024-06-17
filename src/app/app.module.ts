@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AllFreelanceComponent } from './all-freelance/all-freelance.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { AllFreelanceComponent } from './all-freelance/all-freelance.component';
     HomeComponent,
     HeaderComponent,
     AllFreelanceComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { AllFreelanceComponent } from './all-freelance/all-freelance.component';
     RadioButtonModule,
     CalendarModule,
     HttpClientModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

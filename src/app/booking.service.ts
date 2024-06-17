@@ -28,6 +28,14 @@ export class BookingService {
     return this.http.post(`${this.BASE_URL}/booking/add`, booking);
   }
 
+  getAllBookings(): Observable<Booking[]> {
+    return this.http.get<Booking[]>(`${this.BASE_URL}/booking/get/all`);
+  }
+
+  deleteBooking(id: number): Observable<any> {
+    return this.http.delete(`${this.BASE_URL}/booking/delete/${id}`);
+  }
+
   calculTotalPrestation(
     tjm: number,
     numberOfDays: number,

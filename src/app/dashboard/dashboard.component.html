@@ -1,0 +1,38 @@
+<div class="card">
+  <p-table
+    *ngIf="listBookings$ | async as listBookings"
+    [value]="listBookings"
+    styleClass="p-datatable-striped"
+    [tableStyle]="{ 'min-width': '50rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>IDENTITÉ</th>
+        <th>MISSION</th>
+        <th>JOURS</th>
+        <th>TJM</th>
+        <th>TOTAL</th>
+        <th>DATE DE DÉBUT</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-booking>
+      <tr>
+        <td>{{ booking.freelance.firstname }}</td>
+        <td>{{ booking.description }}</td>
+        <td>{{ booking.numberDays }}</td>
+        <td>{{ booking.freelance.price }} €/j</td>
+        <td>
+          {{
+            bookingService.calculTotalPrestation(
+              booking.numberDays,
+              booking.freelance.price
+            ) | currency : "EUR"
+          }}
+        </td>
+        <td>{{ booking.dateDebut | date : "dd/MM/yyyy" }}</td>
+      </tr>
+
+      <button (click)="deleteBooking(booking.id)">Annuler la prestation</button>
+    </ng-template>
+  </p-table>
+</div>
