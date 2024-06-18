@@ -5,5 +5,5 @@ export type Freelance = {
   lastname: string;
   price: number;
   description: string;
-  skills: string[];
+  skills: string;
 };

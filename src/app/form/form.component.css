@@ -71,3 +71,9 @@ input::placeholder {
 .date-precise input {
   border-radius: 50px;
 }
+.error {
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}

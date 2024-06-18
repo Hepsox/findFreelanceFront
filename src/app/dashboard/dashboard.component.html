@@ -13,6 +13,7 @@
         <th>TJM</th>
         <th>TOTAL</th>
         <th>DATE DE DÉBUT</th>
+        <th>ACTION</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-booking>
@@ -30,9 +31,14 @@
           }}
         </td>
         <td>{{ booking.dateDebut | date : "dd/MM/yyyy" }}</td>
+        <td>
+          <button (click)="deleteBooking(booking.id)">
+            Annuler la prestation
+          </button>
+        </td>
       </tr>
 
-      <button (click)="deleteBooking(booking.id)">Annuler la prestation</button>
-    </ng-template>
+      <td></td
+    ></ng-template>
   </p-table>
 </div>

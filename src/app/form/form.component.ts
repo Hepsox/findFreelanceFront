@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  inject,
+} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -7,7 +14,7 @@ import {
 } from '@angular/forms';
 import { BookingService } from '../booking.service';
 import { FreelanceService } from '../freelance.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Freelance } from '../types/freelance.type';
 
 @Component({
@@ -23,6 +30,7 @@ export class FormComponent implements OnInit {
   freelance!: Freelance | null;
 
   devisForm!: FormGroup;
+  router = inject(Router);
 
   constructor(
     private fb: FormBuilder,
@@ -32,7 +40,6 @@ export class FormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('coucou');
     this.devisForm = this.fb.group({
       title: ['', Validators.required],
       debutCondition: ['', Validators.required],
@@ -59,5 +66,6 @@ export class FormComponent implements OnInit {
       entreprise: { id: 1 },
     };
     this.service.createBooking(booking).subscribe();
+    this.router.navigate(['/dashboard']);
   }
 }

@@ -1,9 +1,12 @@
-<div class="container-card-profile">
+<div
+  [routerLink]="['/booking/freelance/', freelance.id]"
+  class="container-card-profile"
+>
   <div class="price">
     <h4>{{ freelance.price }} €/j</h4>
   </div>
 
-  <div class="content" [routerLink]="['/booking/freelance/', freelance.id]">
+  <div class="content">
     <div class="img-profile">
       <img [src]="freelance.photo" />
     </div>
@@ -11,7 +14,9 @@
       <h2>{{ freelance.firstname }} {{ freelance.lastname }}</h2>
       <h3>{{ freelance.description }}</h3>
       <div class="chip">
-        <span>{{ freelance.skills }}</span>
+        <ng-container *ngFor="let skill of skillsArray">
+          <span>{{ skill }}</span>
+        </ng-container>
       </div>
     </div>
   </div>

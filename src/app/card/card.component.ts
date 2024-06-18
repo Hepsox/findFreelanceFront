@@ -8,4 +8,12 @@ import { Freelance } from '../types/freelance.type';
 })
 export class CardComponent {
   @Input() freelance!: Freelance;
+
+  get skillsArray(): string[] {
+    if (typeof this.freelance.skills === 'string') {
+      return this.freelance.skills.split(',').map((skill) => skill.trim());
+    } else {
+      return [];
+    }
+  }
 }

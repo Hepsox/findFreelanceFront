@@ -7,4 +7,18 @@
   border-radius: 15px;
   cursor: pointer;
   padding: 0px 20px 20px 20px;
+  margin: 100px auto 0;
+  width: 90%;
+  max-width: 1500px;
+  font-size: 15px;
+}
+
+.container-dash button {
+  background-color: var(--first-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
 }
