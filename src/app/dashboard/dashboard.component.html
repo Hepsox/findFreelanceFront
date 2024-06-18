@@ -19,15 +19,15 @@
     <ng-template pTemplate="body" let-booking>
       <tr>
         <td>{{ booking.freelance.firstname }}</td>
-        <td>{{ booking.description }}</td>
+        <td>{{ booking.title }}</td>
         <td>{{ booking.numberDays }}</td>
         <td>{{ booking.freelance.price }} €/j</td>
         <td>
           {{
             bookingService.calculTotalPrestation(
-              booking.numberDays,
-              booking.freelance.price
-            ) | currency : "EUR"
+              booking.freelance.price,
+              booking.numberDays
+            )
           }}
         </td>
         <td>{{ booking.dateDebut | date : "dd/MM/yyyy" }}</td>
